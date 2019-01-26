@@ -287,7 +287,7 @@ void Osoba::ilosc_telefonow_wzgledem_plci(int& ilosc_kobiet, int& ilosc)
 }
 int Osoba::liczba_kierunkowych(vector<pair<string, int>>& numer)
 {
-
+	
 	for (int i = 0; i < telefony.size(); i++)
 	{
 		int rezultat = 1;
@@ -308,6 +308,7 @@ int Osoba::liczba_kierunkowych(vector<pair<string, int>>& numer)
 			numer.push_back(temp);
 		}
 	}
+	return 0;
 }
 int Osoba::wyszukaj_id_uzytkownika(string numerkierunkowynadawcy, string numernadawcy)
 {
