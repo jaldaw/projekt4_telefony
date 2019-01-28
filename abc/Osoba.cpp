@@ -80,11 +80,11 @@ void Osoba::wyswietl()
 	cout << "************************************" << endl;
 
 }
-void Osoba::dodaj_Do_Bazy()
+void Osoba::dodaj_Do_Bazy(string stanowisko_s)
 {
 	stringstream sszapytanie;
 	sszapytanie << "INSERT INTO osoba (IMIE, NAZWISKO, ADRES, PLEC, STANOWISKO, PESEL, LOGIN, HASLO) VALUES "
-				<<"('"<<imie<<"' ,'"<<nazwisko<<"' , '"<<adres<<"', '"<<plec<<"' , 'USR', '"<<PESEL<<"', '"<<login<<"' , '"<<haslo<<"');";
+				<<"('"<<imie<<"' ,'"<<nazwisko<<"' , '"<<adres<<"', '"<<plec<<"' , '"<<stanowisko_s<<"' , '"<<PESEL<<"', '"<<login<<"' , '"<<haslo<<"');";
 
 	int qstate = mysql_query(conn, sszapytanie.str().c_str());
 	if (!qstate)

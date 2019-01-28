@@ -7,11 +7,7 @@
 #include <sstream>
 #include <utility>
 using namespace std;
-struct struktura
-{
-	string kierunkowy;
-	int liczba;
-};
+
 class Osoba
 {
 protected:
@@ -32,7 +28,7 @@ public:
 	Osoba();
 	Osoba(string idOsoby_a, string imie_a, string nazwisko_a,string adres, string plec_a
 			,string stanowisko_a, string PESSEL_a, string login_a, string haslo_a);
-	void dodaj_Do_Bazy();
+	void dodaj_Do_Bazy(string stanowisko_s);
 	~Osoba();
 	void wyswietl();
 	void polaczenia(int tryb);
